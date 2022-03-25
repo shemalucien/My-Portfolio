@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Sign Up Pages</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="imgBx" id="login">
+            <img src="../assets/images/Login.jfif" alt="Welcome Photo">
+            <h1>Welcome To My Portfolio</h1>
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Hello ! Welcome Back.</h2>
+                <h3>Log in with your data that you entered during registration</h3>
+                <form onsubmit="return false ;" id="loginform">
+                    <div class="input-field button">
+                        <input type="text" name="" id="email" class="input" placeholder="email">
+                    </div>
+                    <div class="input-field button">
+                        <input type="password" name="" id="password" class="input" placeholder="password">
+                    </div>
+
+                    <div class="input-field button">
+                        <button type="button" id="login" onclick="loginUser()"
+                            class="button w-full bg-blue text-white font-20">Login</button>
+                    </div>
+                    <div class="checkbox-text">
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                </form>
+                <div class="input-field">
+                    <p>Don’t have an account?
+                        <a href="Signup.html">Signup</a>
+                    </p>
+                </div>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+    <script src="./scripts/auth.js"></script>
+
+    <script src="/scripts/auth.js"></script>
+</body>
+
+</html>

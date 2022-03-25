@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/styles/login.css">
+
+
+</head>
+
+<body>
+    <section class="signupform">
+        <div class="imgBx">
+            <img src="../assets/images/Sign Up.jfif" alt="Welcome Photo">
+            <h1>Glad to see you !! Lets get Started</h1>
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <h2>Create Account</h2>
+                <h3>Fill your details to get registered with us !</h3>
+                <div id="errorMsg1"></div>
+
+
+                <form onsubmit="return false ;" id="signupform">
+                    <div class="input-field button">
+                        <input type="text" name="" id="first_name" class="input" placeholder="Firstname">
+                    </div>
+                    <div class="input-field button">
+                        <input type="text" name="" id="last_name" class="input" placeholder="Lastname">
+                    </div>
+                    <div class="input-field button">
+                        <input type="text" name="" id="email" class="input" placeholder="email or phone">
+                    </div>
+                    <div class="input-field button">
+                        <input type="password" name="" id="password" class="input" placeholder="password">
+                    </div>
+
+                    <div class="input-field button">
+                        <button type="submit" onclick="addUser()">Sign Up</button>
+                    </div>
+
+                </form>
+
+
+                <div class="input-field">
+                    <p> Already Registered ?
+                        <a href="Login.html">Sign In</a>
+                    </p>
+                </div>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./scripts/auth.js"></script>
+
+</body>
+
+</html>

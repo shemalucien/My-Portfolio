@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Dashboard</title>
+    <link rel="stylesheet" href="/styles/admin dashboard/blogdashboard.css">
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section class="dashboard">
+        <div class="sidebar">
+            <div class="logo-details">
+                <a href="index.html"> <i class='bx bx-home'></i></a>
+                <span class="logo_name">SL</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="dashboardadmin.html" class="active">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="userdashboard.html">
+                        <i class='bx bx-box'></i>
+                        <span class="links_name">Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="subscribers.html">
+                        <i class='bx bx-box'></i>
+                        <span class="links_name">Subscribers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-list-ul'></i>
+                        <span class="links_name">Comments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="querydashboard.html">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="links_name">Queries</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blogdashboard.html">
+                        <i class='bx bx-coin-stack'></i>
+                        <span class="links_name">Blogs</span>
+                    </a>
+                </li>
+
+                <li class="log_out">
+                    <a href="#">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links_name">Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+
+
+        <div class="profile">
+
+            <img src="/assets/images/profile.jpg" alt="pic">
+        </div>
+        <div class="content">
+            <h2>Overview</h2>
+            <a href="editblog.html" class="btn add">add Blog</a>
+            <h1 class="heading">My Blogs</h1>
+            <!-- blog section -->
+            <section class="blogs-section" id="blog-section">
+                <div class="blog-card">
+                    <img class="blog-photo" src="assets/images/blog-one (3).jpg" alt="" loading="lazy">
+                    <span class="tag"><i class="fa fa-calendar"></i> 02/2/2022</span>
+                    <div class="content">
+                        <a href="#" class="title">Computer Generations</a>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quasi
+                            voluptates,
+                            obcaecati eveniet vero fugit labore soluta corporis cum fugiat iusto itaque,
+                            architecto veniam nihil porro corrupti deleniti, iure impedi.</p>
+                    </div>
+                    <div class="reactions">
+                        <span class="iconify" data-icon="ant-design:like-outlined" style="color: cyan;" data-width="30"
+                            data-height="30"></span>
+
+                        <span class="iconify" data-icon="bx:comment" style="color: cyan;" data-width="30"
+                            data-height="30"></span>
+                    </div>
+                    <a href="blogpage.html" class="btn dark">read</a>
+                    <a href="editblog.html" class="btn grey">edit</a>
+                    <a href="/" class="btn danger">delete</a>
+                </div>
+                <div class="blog-card">
+
+                    <img class="blog-photo" src="assets/images/blog-one (3).jpg" alt="" loading="lazy">
+                    <span class="tag"><i class="fa fa-calendar"></i> 02/2/2022</span>
+                    <div class="content">
+                        <a href="#" class="title">Computer Generations</a>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quasi
+                            voluptates,
+                            obcaecati eveniet vero fugit labore soluta corporis cum fugiat iusto itaque,
+                            architecto veniam nihil porro corrupti deleniti, iure impedi.</p>
+                    </div>
+                    <div class="reactions">
+
+                        <span class="iconify" data-icon="ant-design:like-outlined" style="color: cyan;" data-width="30"
+                            data-height="30"></span>
+
+                        <span class="iconify" data-icon="bx:comment" style="color: cyan;" data-width="30"
+                            data-height="30"></span>
+                    </div>
+                    <a href="blogpage.html" class="btn dark">read</a>
+                    <a href="editblog.html" class="btn grey">edit</a>
+                    <a href="/" class="btn danger">delete</a>
+                </div>
+                <div class="blog-card">
+
+                    <img class="blog-photo" src="assets/images/blog-one (3).jpg" alt="" loading="lazy">
+                    <span class="tag"><i class="fa fa-calendar"></i> 02/2/2022</span>
+                    <div class="content">
+                        <a href="#" class="title">Computer Generations</a>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quasi
+                            voluptates,
+                            obcaecati eveniet vero fugit labore soluta corporis cum fugiat iusto itaque,
+                            architecto veniam nihil porro corrupti deleniti, iure impedi.</p>
+                    </div>
+                    <div class="reactions">
+
+                        <span class="iconify" data-icon="ant-design:like-outlined" style="color: cyan;" data-width="30"
+                            data-height="30"></span>
+
+                        <span class="iconify" data-icon="bx:comment" style="color: cyan;" data-width="30"
+                            data-height="30"></span>
+                    </div>
+                    <a href="blogpage.html" class="btn dark">read</a>
+                    <a href="editblog.html" class="btn grey">edit</a>
+                    <a href="/" class="btn danger">delete</a>
+                </div>
+                <div class="blog-card">
+
+                    <img class="blog-photo" src="assets/images/blog-one (3).jpg" alt="" loading="lazy">
+                    <span class="tag"><i class="fa fa-calendar"></i> 02/2/2022</span>
+                    <div class="content">
+                        <a href="#" class="title">Computer Generations</a>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quasi
+                            voluptates,
+                            obcaecati eveniet vero fugit labore soluta corporis cum fugiat iusto itaque,
+                            architecto veniam nihil porro corrupti deleniti, iure impedi.</p>
+                    </div>
+                    <div class="reactions">
+
+                        <span class="iconify" data-icon="ant-design:like-outlined" style="color: cyan;" data-width="30"
+                            data-height="30"></span>
+
+                        <span class="iconify" data-icon="bx:comment" style="color: cyan;" data-width="30"
+                            data-height="30"></span>
+                    </div>
+                    <a href="blogpage.html" class="btn dark">read</a>
+                    <a href="editblog.html" class="btn grey">edit</a>
+                    <a href="/" class="btn danger">delete</a>
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+
+
+
+    <!-- pagination elements -->
+    <div class="pagination_section">
+        <a href="#">Previous</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#" class="active">4</a>
+        <a href="#">5</a>
+        <a href="#">Next >></a>
+    </div>
+
+
+    <script src="/scripts/admin/blogsdashboard.js"></script>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+</body>
+
+</html>

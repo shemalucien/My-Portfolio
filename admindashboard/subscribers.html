@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Queries Dashboard</title>
+    <link rel="stylesheet" href="styles/subscribes.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section class="dashboard">
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class='bx bx-home'></i>
+                <span class="logo_name">SL</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="dashboardadmin.html" class="active">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="links_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="userdashboard.html">
+                        <i class='bx bx-box'></i>
+                        <span class="links_name">Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="subscribers.html">
+                        <i class='bx bx-box'></i>
+                        <span class="links_name">Subscribers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-list-ul'></i>
+                        <span class="links_name">Comments</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="querydashboard.html">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="links_name">Queries</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blogdashboard.html">
+                        <i class='bx bx-coin-stack'></i>
+                        <span class="links_name">Blogs</span>
+                    </a>
+                </li>
+
+                <li class="log_out">
+                    <a href="index.html">
+                        <i class='bx bx-log-out'></i>
+                        <span class="links_name">Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+
+        <div class="content">
+            <h2 class="heading">Overview</h2>
+            <div class="profile">
+
+                <img src="assets/images/profile.jpg" alt="pic">
+
+            </div>
+            <h1 class="heading">List of Subscribers</h1>
+            <section ID="subscribers">
+
+                <div class="content-details">
+
+                    <ul class="details">
+                        <li class="topic">ID</li>
+                        <li><a href="#">01</a></li>
+                        <li><a href="#">01</a></li>
+                        <li><a href="#">01</a></li>
+                        <li><a href="#">01</a></li>
+                        <li><a href="#">01</a></li>
+
+                    </ul>
+                    <ul class="details">
+                        <li class="topic">Email</li>
+                        <li><a href="#">shemalucien5@gmail.com</a></li>
+                        <li><a href="#">shemalucien5@gmail.com</a></li>
+                        <li><a href="#">shemalucien5@gmail.com</a></li>
+                        <li><a href="#">shemalucien5@gmail.com</a></li>
+                        <li><a href="#">shemalucien5@gmail.com</a></li>
+
+                    </ul>
+                    <ul class="details">
+                        <li class="topic">Unsubscribe</li>
+                        <li><a href="#">Unsubscribe</a></li>
+                        <li><a href="#">Unsubscribe</a></li>
+                        <li><a href="#">Unsubscribe</a></li>
+                        <li><a href="#">Unsubscribe</a></li>
+                        <li><a href="#">Unsubscribe</a></li>
+
+                    </ul>
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+
+
+
+    <!-- pagination elements -->
+    <div class="pagination_section">
+        <a href="#">Previous</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#" class="active">4</a>
+        <a href="#">5</a>
+        <a href="#">Next >></a>
+    </div>
+    <script src="/scripts/admin/subscribersdashboard.js"></script>
+</body>
+
+</html>

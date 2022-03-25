@@ -1,0 +1,125 @@
+.blog{
+    width:100%;
+      position:relative;
+      padding:2rem 0;
+      background-color: black;
+  }
+  .blog .title_header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+  }
+  .blog section{
+    width:100%;
+    margin: 1em 2em;
+    display: flex;
+    flex-wrap: wrap;    
+  }
+    
+    .blog section .card{
+    background-color:black;
+    padding:0.5rem;
+    border-radius:5px;
+    border:1px solid rgba(1,1,1,0.1);
+    position:relative;
+    overflow:hidden;
+    width:30%;
+    margin:10px;
+    }
+    
+    .blog section .card .tag{
+    position:absolute;
+    top:15px;
+    left:15px;
+    padding:4px 10px;
+    color: white;
+    background-color:cyan;
+    text-align:center;
+    border-radius:5px;
+    font-size:13px;
+    overflow:hidden;
+    }
+    
+    .blog section .card img{
+    width:100%;
+    object-fit:cover;
+    height:200px;
+    }
+    
+    .blog section .card .content{
+    padding:0rem 1rem;
+    }
+    
+    .blog section .card .desc{
+      color:white;
+
+    }
+    .blog section .card .title{
+    font-size:1.5em;
+    color:cyan;
+    font-weight: bold;
+    text-decoration: none;
+
+    
+    }
+    .blog section .card .reactions .iconify{
+      color: cyan;
+      width: 2.5em;
+      height: 2.5em;
+     
+}
+.blog section .card .reactions label{
+color: white;
+ font-size: 1.5em;
+
+}
+    
+    .blog:hover  .buttons{
+    opacity:1;
+    }
+    
+    .blog .fa-angle-double-right{
+    position:absolute;
+    top:50%;
+    right:30px;
+    background:#000;
+    padding:20px;
+    border-radius:50%;
+    color:#fff;
+    }
+    .blog .fa-angle-double-left{
+    position:absolute;
+    top:50%;
+    left:30px;
+    background:#000;
+    padding:20px;
+    border-radius:50%;
+    color:#fff;
+    }
+    .blog .angles{
+    opacity:0.7;
+    transition:0.5s;
+    }
+    .blog .angles:hover{
+    opacity:1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    
+    @media (max-width:920px){
+      .blog .title_header{
+        width:100%;
+          position:relative;
+          padding:2rem 0;
+          background-color: black;
+          margin-left: 2em;
+      }
+    .blog section .card{
+    width:100%;
+    margin:0;
+    margin-right:15px;
+    }
+    }
+  
