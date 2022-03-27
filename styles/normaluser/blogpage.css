@@ -111,7 +111,7 @@ header svg{
       flex-direction: row;
       
   }
-  .introduction .blogpic{
+  .introduction .blogpic img{
       /* background: url('../assets/images/blog-one\ \(1\).jpg'); */
       width: 50%;
       height: 50vh;
@@ -146,8 +146,6 @@ header svg{
   .comment {
     border: 1px solid white;
     background-color: black;
-width: 30%;
-height: 30%;
     border-radius: 5px;
     padding-left: 40px;
     padding-right: 30px;
