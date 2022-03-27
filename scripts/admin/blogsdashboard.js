@@ -66,49 +66,6 @@ async function deleteBlog(blogId) {
     }
 }
 
-async function showBlog(blogId) {
-    let res = [];
-    const token = localStorage.getItem('token');
-    console.log(token);
-    fetch("https://shemalucien.herokuapp.com/api/v1/blogs/" + blogId, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            "authorization": 'bearer ' + token
-        },
-
-    })
-        .then((response) => response.json())
-        .then((json) => {
-            res = json.data;
-            console.log(res.title)
-
-            document.getElementById("title").value = res.title;
-            document.getElementById("author").value = res.author;
-            document.getElementById("article").value = res.desc;
-            // document.getElementById("photo").src = res.photo;
-            `
-            <div class="banner">
-        <input type="file" accept="image/*" id="banner-upload" hidden>
-        <label for="banner-upload" class="banner-upload-btn"><img src="assets/images/upload.png"
-                alt="upload banner"></label>
-    </div>
-    <div class="blog">
-        <textarea type="text" class="title" id="title" placeholder="Blog title...">${res.title}</textarea>
-        <textarea type="text" class="author" id="author" placeholder="Author..."></textarea>
-        <textarea type="text" class="article" id="article" placeholder="Start writing here..."></textarea>
-    </div>
-
-    <div class="blog-options">
-        <button type="submit" class="btn dark publish-btn" id="tap" onclick="addBlog()">publish</button>
-        <input type="file" accept="image/*" id="image-upload" hidden>
-        <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
-    </div>
-            `
-
-        })
-        .catch((err) => console.log(err));
-};
 
 
 

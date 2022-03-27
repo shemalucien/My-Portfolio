@@ -97,10 +97,11 @@
 /* left box */
 .content-details{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  flex-direction:row;
+ height: 10%; 
+  
+   justify-content: center; 
+ 
 }
 
 .content-details .details{
@@ -109,8 +110,14 @@
 li{
 list-style-type: none;  
 color: white;
-
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: .5em 0;
 }
+
+  
+
 li a{
   color: white;
   font-size: 1em;
@@ -122,6 +129,7 @@ li a{
   position: relative;
   margin: .5em .5em;
 }
+
 
 
 .pagination_section {
