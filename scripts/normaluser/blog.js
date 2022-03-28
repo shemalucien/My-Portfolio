@@ -26,6 +26,7 @@ const readMore = async () => {
 };
 readMore();
 
+
 async function sendComment() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -102,5 +103,11 @@ const getAllComments = async () => {
   }
 };
 getAllComments();
+
+
+
+
+
+
 
 

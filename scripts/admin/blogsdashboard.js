@@ -69,6 +69,7 @@ async function deleteBlog(blogId) {
 
 
 
+
 const DataId = location.search.substring(1);
 
 const readMore = async () => {
@@ -92,6 +93,7 @@ const readMore = async () => {
         .catch((err) => console.log(err));
 };
 readMore();
+
 
 
 const getAllComments = async () => {
