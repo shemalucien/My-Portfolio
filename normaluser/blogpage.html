@@ -49,18 +49,18 @@
         <div class="introduction" id="introduction">
             <div class="intro-msg" id="intro-msg">
                 <h2 id="title">The More Important the Work, the More Important the Rest</h2>
-                <!-- <p id="articles-data">
+                <p id="articles-data">
                     Any mechanical keyboard enthusiasts in design?
                     Understanding color theory: the color wheel and finding complementary colors
                     Yo Reddit! What’s a small thing that anyone can do at nearly anytime to improve their mood and make
                     them
                     happier?
                     How to design a product that can grow itself 10x in year:
-                </p> -->
+                </p>
             </div>
 
-            <div class="blogpic" id="blogpic">
-
+            <div class="blogpic">
+                <img id="blogpic" src="" alt="blogpic" />
             </div>
         </div>
 
@@ -105,6 +105,7 @@
                         data-height="30"></span>
                 </div>
             </div>
+        </section>
 
             <div class="readers">
                 <h1>Comments</h1>
@@ -137,11 +138,14 @@
                 </div>
                 <div class="form-inline"> <input type="checkbox" name="check" id="checkbx" class="mr-1"> <label
                         for="subscribe">Subscribe me to the newlettter</label> </div>
-                <div class="form-group"> <button type="button" id="post" class="btn">Post Comment</button> </div>
+                <div class="form-group"> <button type="button" id="post" class="btn" onclick="sendComment()">Post
+                        Comment</button> </div>
             </form>
-        </section>
+        
     </section>
-    <script src="/scripts/blog.js"></script>
+    <script src="/scripts/normaluser/blog.js"></script>
+
+
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script>
