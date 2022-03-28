@@ -36,7 +36,7 @@ const fetchUsers = async () => {
                         <li class="topic">Email</li>
                         <li><a href="#">${res.email}</a></li>
                     </ul>
-    
+
                     <ul class="details">
                         <li class="topic">Role</li>
                         <li><a href="#">${res.role}</a></li>

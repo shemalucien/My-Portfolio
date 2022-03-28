@@ -41,7 +41,7 @@ const fetchQueries = async () => {
                     </ul>
                     <ul class="details">
                         <li class="topic">Delete</li>
-                        <li><a href="#" id="${res._id}" onclick=willdeleteQuery(this.id)>delete</a></li>
+                        <li><a href="#" id="${res._id}" onclick="willdeleteQuery(this.id)">delete</a></li>
                     
                     </ul>
                 </div>
@@ -56,7 +56,7 @@ fetchQueries();
 async function willdeleteQuery(queryId) {
     const token = localStorage.getItem('token');
     try {
-        const willdeleteQuery = await fetch("https://shemalucien.herokuapp.com/v1/queries/" + queryId, {
+        const willdeleteQuery = await fetch("https://shemalucien.herokuapp.com/v1/queries/:" + queryId, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

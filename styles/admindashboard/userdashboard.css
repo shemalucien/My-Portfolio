@@ -10,7 +10,7 @@
 .sidebar{
     position: fixed;
     height: 100%;
-    width: 240px;
+    width: 20%;
     background: linear-gradient(179.16deg, #20C6DD 9.01%, #000000 98.5%, rgba(196, 196, 196, 0) 99.2%);
     transition: all 0.5s ease;
     margin-right: 1em;
@@ -75,13 +75,13 @@
     bottom: 0;
     width: 100%;
   }
-
-  .content{
-    background: black;
-    width: 100%;
-   
-  }
- .content .profile-details{
+.content-details{
+  background: black;
+  width: 80%;
+  height: 100vh;
+  margin-left: 15em;
+}
+ .content-details .profile-details{
     color: #000000;
   }
   .profile{
@@ -93,154 +93,43 @@
     border-radius: .5em;
     object-fit: cover;
   }
-
-  .heading{
-    color:cyan;
-    font-size: 1.5em;
-    text-align: center;
-    position: relative;
-    margin: .5em .5em;
+  
+/* left box */
+.content-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-  .blogs-section{
-    width: 70%;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 20em;
-    color: white;
-  
-  }
-  
-  
-  .blog-card{
-    background-color:black;
-    padding:0.5rem;
-    border-radius:5px;
-    border:1px solid rgba(1,1,1,0.1);
-    position:relative;
-    overflow:hidden;
-    width:100%;
-    margin:10px;
-    }
-    
-    .blog-card .tag{
-    position:absolute;
-    top:15px;
-    left:15px;
-    padding:4px 10px;
-    color: white;
-    background-color:cyan;
-    text-align:center;
-    border-radius:5px;
-    font-size:13px;
-    overflow:hidden;
-    }
-    
-    .blog-card img{
-    width:100%;
-    object-fit:cover;
-    height:200px;
-    }
-    
-    .blog-card .content{
-    padding:0rem 1rem;
-    }
-    
-    .blog-card .desc{
-      color:white;
 
-    }
-    .blog-card .title{
-    font-size:1.5em;
-    color:cyan;
-    font-weight: bold;
-    text-decoration: none;
-
-    
-    }
-    .blog-card .reactions .iconify{
-      color: cyan;
-      width: 2.5em;
-      height: 2.5em;
-     
+.content-details .details{
+  margin: 1em 1em;
 }
-.blog-card .reactions label{
+li{
+list-style-type: none;  
 color: white;
- font-size: 1.5em;
 
 }
-    
-.blog-card:hover  .buttons{
-    opacity:1;
-    }
-    
-    .blog-card .fa-angle-double-right{
-    position:absolute;
-    top:50%;
-    right:30px;
-    background:#000;
-    padding:20px;
-    border-radius:50%;
-    color:#fff;
-    }
-    .blog-card .fa-angle-double-left{
-    position:absolute;
-    top:50%;
-    left:30px;
-    background:#000;
-    padding:20px;
-    border-radius:50%;
-    color:#fff;
-    }
-    .blog-card .angles{
-    opacity:0.7;
-    transition:0.5s;
-    }
-    .blog-card .angles:hover{
-    opacity:1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    }
-    
-
-.btn.grey{
-  text-align: center;
-  background: #c5c5c5;
-  color: #000;
-  margin: 0 10px;
-}
-.btn.add {
-  text-align: center;
-  background: cyan;
-  width: 5rem;
-  color: #000;
-  margin-left: 20em;
+li a{
   color: white;
-  
+  font-size: 1em;
 }
-.btn.danger{
+.heading{
+  color:cyan;
+  font-size: 1.5em;
   text-align: center;
-  background: #f00;
-  color: #fff;
+  position: relative;
+  margin: .5em .5em;
 }
 
-
-
-.btn.dark{
-  background: #1b1b1b;
-  color: #fff;
-}
-
-.blogs-section{
-  word-break: break-word;
-}
 
 .pagination_section {
-  background: white;
-  align-items: center;
+width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    bottom: 0;    
+    bottom: 0;
 }
 /* pagination styling */
  
@@ -301,31 +190,26 @@ a:nth-child(7) {
     font-weight: 500;
    margin-left: 20px;
   }
-  .sidebar.active ~ .home-section{
-    overflow: hidden;
-    left: 220px;
-  }
   
-  .home-section nav{
-    width: calc(100% - 60px);
-    left: 60px;
-  }
-  .sidebar.active ~ .home-section nav{
-    width: calc(100% - 220px);
-    left: 220px;
-  }
-  .content{
-    
+  .content-details {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
-  .content .blogs-section{
-    margin: .5em 5em;
+  .content-details .details{
+    /* margin: 1em 1em; */
+  }
+   
+
 }
 @media (max-width: 1150px) {
    .content-details{
     flex-direction: column;
   }
- .content .box{
+ .content-details .box{
     width: 100%;
     overflow-x: scroll;
     margin-bottom: 30px;
@@ -333,23 +217,20 @@ a:nth-child(7) {
   .sidebar .nav-links span{
     display: none;
   }
-  .content{
-    width: 100%;
+  .content-details{
     margin: 0;
   }
-  
-  .content .blogs-section{
-    margin: .5em 5em;
-    width: 70%;
-
+  .content-details{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
-  .btn.add{
-    text-align: center;
-    background: cyan;
-    width: 5rem;
-    color: #000;
-    margin:1em 10em;
-    
+  .content-details .details{
+    margin: .5em .5em;
+
   }
 }
 @media (max-width: 700px) {
@@ -358,33 +239,24 @@ a:nth-child(7) {
   nav .profile-details i{
     display: none;
   }
+  .sidebar .nav-links span{
+    display: none;
+  }
  .profile-details{
     height: 50px;
     min-width: 40px;
   }
-  .sidebar .nav-links span{
-    display: none;
-  }
-  .content{
+  .content-details{
     width: 100%;
     display: flex;
-    flex-direction:column;
+    flex-direction: row;
     justify-content:center;
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
-  .content .blogs-section{
-    margin: .5em 5em;
+  .content-details .details{
+    margin: .5em .5em;
 
-    width: 70%;
-  }
-  .btn.add{
-    text-align: center;
-    background: cyan;
-    width: 5rem;
-    color: #000;
-    margin:1em 10em;
-    
   }
 }
 @media (max-width: 550px) {
@@ -394,13 +266,17 @@ a:nth-child(7) {
   .sidebar .nav-links span{
     display: none;
   }
-  .content{
+  .content-details{
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
-  .content .blogs-section{
-    margin: .5em 5em;
+  .content-details .details{
+    margin: .5em .5em;
 
   }
-  
    
-}}
+}

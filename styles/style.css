@@ -1,47 +1,24 @@
 body{
   font-family: 'Poppins',sans-serif;
   background: black;
-  margin: 0;
-  padding: 0;
-}
-.landingpage{
-  position: absolute;
+ margin: 0;
  padding: 0;
-  margin: 1em 0 ;
-  background: url(../assets/images/profile1.png);
-  background-size: cover;
-  height: auto;
-  background-position-x: 20%;
-  background-position-y: 20%;
-  width: 100%;
-  height: 100vh;
-  
-}
-a{
-  text-decoration: none;
-  font-size: 1rem;
-  color: white;
-  padding: .1em .2em;
-}
-.hero-msg{
-  padding:1.875em 2em;
-  margin-top: 12.5em;
-   color:white;
-   height: 90vh;
-   font-weight: bold;
-
+ width: 100%;
 }
 .logo{
+  text-decoration: none;
   color: white;
   font-weight: bold;
   padding-left: 2em;
-}nav{
+}
+nav {
   position: fixed;
   right: 0;
   top: 0;
   background:black;
-  z-index: 999;
+  z-index: 999; 
   width: 30%;
+  height: 100vh;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 -webkit-transition: -webkit-transform .5s ease-in-out;
@@ -51,24 +28,22 @@ transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 
 }
 
-#navbar{
+.navbar{
   background-color: black;
 height: 5vh;
-
   position:sticky;
   top: 0;
  
 }
-nav ul{
-  list-style-type: none;
-}
-nav ulli a{
-  color:white;
-background:black;
+nav li a{
+  align-items: center;
+  text-decoration: none;
+  font-size: .8em;
+  color:white; 
   padding: 75em 2em;
-  display: block;
+ 
 }
-nav ul a:hover{
+nav  li:hover{
   background: grey;
   color: cyan;
 }
@@ -88,24 +63,43 @@ header{
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.open-nav{
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+nav svg.close {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
 header svg{
   width: 2.3em;
   margin-top: -.6em;
   cursor: pointer;
 }
-.open-nav{
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
+
+.landingpage{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/profile.jpg");
+  max-width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.aboutme{
-
+.hero-msg{
+  text-align: left;
+  position: absolute;
+  top: 70%;
+  left:15%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+ .aboutme{
   margin-top: 1em;
-    height: 50vh;
-    width: 100%;
-    color: white;
-    background-color: #000000;
-    display: flex;
-
+  height: 50vh;
+  width: 100%;
+  color: white;
+  background-color: #000000;
+  display: flex;
   }
 .profile-picture{
     background: url('../assets/images/profile.jpg');
@@ -113,8 +107,10 @@ header svg{
     border-radius: 2em;
     width: 30%;
     height: 50vh;
+    margin: 1em 1em;
   }
   .info{
+    margin: 1em 1em;
     padding: 1em 1em;
   }
   .info h1{
@@ -133,18 +129,17 @@ header svg{
  .btn {
 padding: .5em 2em;
     background:cyan;  
-
   }
   a{
     padding: .5em .5em;
     border-radius: 20px;
     text-decoration: none;
-    color: white;
-    
+    color: white;  
   }
 
   .heading h1{
     color: cyan;
+    margin: 1em 1em;
   }
   .myskills{
     display: flex;
@@ -160,6 +155,64 @@ padding: .5em 2em;
     font-weight: bold;
     font-size: 2em;
   }
+
+@media only screen and (min-width: 680px) {
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+  }
+  .landingpage{
+    width: 100%; 
+  }
+  .hero-msg{
+    text-align: left;
+    position: absolute;
+  }
+}
+
+@media only screen and(max-width:1200px){
+  body{
+    width: 100%;
+    margin: 0 ;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .menu {
+    display: none;
+  }
+  .landingpage{
+    margin: 0 auto;
+    max-width: 100%;
+  height: 100%;
+  }
+  nav {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: unset;
+    display: flex;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav  li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+  }
+  nav  li a {
+    color:white;
+    padding: .5em 1.5em;
+    font-size: .9rem;
+  }
+  nav li a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+}
   @media (max-width:765px){
     .profile-picture{
       width: 100%;
@@ -171,22 +224,18 @@ padding: .5em 2em;
       width: 100%;
     }
     .aboutme,.myskills,.heading{
-    padding:2rem 0rem;
+    padding:2rem 1rem;
     }
     .info p{
       font-size: 1em;
       margin-bottom: 2.5em;
     }
     .btn {
-      padding: .5em 1em;
-          background:cyan;  
-      
+      padding: .3em .2em;
+          background:cyan;      
         }
-    
-  
-    }
+    } 
 
- /* My Services*/
 .service{
 width:100%;
 background-color:black;
@@ -194,17 +243,13 @@ padding:2rem;
 border-top:4px solid black;
 }
 .service .title_header{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
   color: white;
+  text-align: center;
 }
 
 .service .title {
  font-weight: bold;
- color: white;
+ color: cyan;
 }
 
 .service section{
@@ -223,13 +268,13 @@ text-align:center;
 border-radius:5px;
 transition:0.5s;
 color:white;
-background-color:gray;
+background-color:black;
 }
 
 .service section .card:hover{
--webkit-box-shadow: inset 1px 1px 10px rgba(255,255,255,0.3);
--moz-box-shadow:    inset 1px 1px 10px rgba(255,255,255,0.3);
-box-shadow:         inset 1px 1px 10px rgba(255,255,255,0.3);
+-webkit-box-shadow: inset 1px 1px 10px grey;
+-moz-box-shadow:    inset 1px 1px 10px grey;
+box-shadow:         inset 1px 1px 10px grey;
 }
 
 .service section .card .title{
@@ -246,12 +291,8 @@ text-align: center;
   border-top:4px solid black;
   }
   .portfolio .title_header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
     color: white;
+  text-align: center;
   }
   .portfolio .categories{
       list-style-type: none;
@@ -269,7 +310,7 @@ text-align: center;
  
   .portfolio .title {
    font-weight: bold;
-   color: white;
+   color: cyan;
   }
   
   .portfolio section{
@@ -288,137 +329,168 @@ margin: .2em .2em;
   border-radius:5px;
   transition:0.5s;
   color:white;
-  background-color:gray;
+  background-color:black;
+  }
+  .portfolio section .card img{
+  width: 100%;
+  height: 30vh;
+object-fit: cover;
   }
   
   .portfolio section .card:hover{
-  -webkit-box-shadow: inset 1px 1px 10px rgba(255,255,255,0.3);
-  -moz-box-shadow:    inset 1px 1px 10px rgba(255,255,255,0.3);
-  box-shadow:         inset 1px 1px 10px rgba(255,255,255,0.3);
+  -webkit-box-shadow: inset 1px 1px 10px grey;
+  -moz-box-shadow:    inset 1px 1px 10px grey;
+  box-shadow:         inset 1px 1px 10px grey;
   }
   
   .portfolio section .card .title{
   font-size:1.2em;
  text-align: center;
   }
-  
 
-  .experience{
-    width:100%;
-    position:relative;
-    padding:2rem 0;
-    background-color: black;
-  }
-  .experience .title_header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: white;
-  }
-  .experience section{
-    width:100%;
-    
-    transition:0.5s;
+  @media (max-width:765px){
+    .service{
+    padding:2rem 0rem;
+    width: 100%;
     }
-    
-    .experience section .card{
-    display:inline-block;
-    background-color:black;
-    padding:0.5rem;
-    border-radius:5px;
-    border:1px solid rgba(1,1,1,0.1);
-    position:relative;
-    overflow:hidden;
-    width:30%;
-    margin:10px;
-    }
-    
-    .experience  section .card .tag{
-    position:absolute;
-    top:15px;
-    left:15px;
-    padding:4px 10px;
-    color: white;
-    background-color:cyan;
-    text-align:center;
-    border-radius:5px;
-    font-size:13px;
-    overflow:hidden;
-    }
-    
-    .experience section .card img{
-    width:100%;
-    object-fit:cover;
-    height:200px;
-    }
-    
-    .experience section .card .content{
+    .service section{
+      
     padding:0rem 1rem;
-    white-space:pre-wrap;
+    flex-wrap:wrap;
     }
-    
-    .experience section .card .content p{
-      color: white;
-    }
-    .experience section .card .title {
-    font-size:1.5em;
- 
-    font-weight: bold;
-  text-decoration: none;
-  color: cyan;
-    
+    .service section .card{
+    margin:10px 0;
+    width: 100%;
     
     }
-    
-    .experience:hover  .buttons{
-    opacity:1;
+    }  
+  @media (max-width:765px){
+    .portfolio{
+    padding:2rem 0rem;
+    width: 100%;
     }
-    
-    .experience .fa-angle-double-right{
-    position:absolute;
-    top:50%;
-    right:30px;
-    background:#000;
-    padding:20px;
-    border-radius:50%;
-    color:#fff;
+    .portfolio section{
+      
+    padding:0rem 1rem;
+    flex-wrap:wrap;
     }
-    .experience .fa-angle-double-left{
-    position:absolute;
-    top:50%;
-    left:30px;
-    background:#000;
-    padding:20px;
-    border-radius:50%;
-    color:#fff;
-    }
-    .experience .angles{
-    opacity:0.7;
-    transition:0.5s;
-    }
-    .experience .angles:hover{
-    opacity:1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    }
-    
-  
+    .portfolio section .card{
+    margin:10px 0;
+    width: 100%; 
    
+    }
+    }
+  
 
-    .blog{
+    .experience{
       width:100%;
-        position:relative;
+        /* position:relative; */
         padding:2rem 0;
         background-color: black;
     }
-    .blog .title_header{
+    .experience .title_header{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       font-weight: bold;
       color: white;
+    }
+    .experience section{
+      width:100%;
+      
+      transition:0.5s;
+      }
+      
+      .experience section .card{
+      display:inline-block;
+      background-color:black;
+      padding:0.5rem;
+      border-radius:5px;
+      border:1px solid rgba(1,1,1,0.1);
+      position:relative;
+      overflow:hidden;
+      width:30%;
+      margin:10px;
+      }
+      
+      .experience  section .card .tag{
+      position:absolute;
+      top:15px;
+      left:15px;
+      padding:4px 10px;
+      color: white;
+      background-color:cyan;
+      text-align:center;
+      border-radius:5px;
+      font-size:13px;
+      overflow:hidden;
+      }
+      
+      .experience section .card img{
+      width:100%;
+      object-fit:cover;
+      height:200px;
+      }
+      
+      .experience section .card .content{
+      padding:0rem 1rem;
+      white-space:pre-wrap;
+      }
+      
+      .experience section .card .content p{
+        color: white;
+      }
+      .experience section .card .title {
+      font-size:1.5em;
+   
+      font-weight: bold;
+    text-decoration: none;
+    color: cyan;
+      
+      
+      }
+      
+      .experience:hover  .buttons{
+      opacity:1;
+      }
+      
+      .experience .fa-angle-double-right{
+      position:absolute;
+      top:50%;
+      right:30px;
+      background:#000;
+      padding:20px;
+      border-radius:50%;
+      color:#fff;
+      }
+      .experience .fa-angle-double-left{
+      position:absolute;
+      top:50%;
+      left:30px;
+      background:#000;
+      padding:20px;
+      border-radius:50%;
+      color:#fff;
+      }
+      .experience .angles{
+      opacity:0.7;
+      transition:0.5s;
+      }
+      .experience .angles:hover{
+      opacity:1;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+      
+
+    .blog{
+      width:100%;
+        padding:2rem 0;
+        background-color: black;
+    }
+    .blog .title_header{
+      color: white;
+      text-align: center;
     }
     .blog section{
       width:100%;
@@ -432,8 +504,9 @@ margin: .2em .2em;
       padding:0.5rem;
       border-radius:5px;
       border:1px solid rgba(1,1,1,0.1);
-      position:relative;
       overflow:hidden;
+      position:relative;
+     
       width:30%;
       margin:10px;
       }
@@ -479,51 +552,65 @@ margin: .2em .2em;
         height: 2.5em;
        
   }
-  .blog section .card .reactions label{
-  color: white;
-   font-size: 1.5em;
-  
-  }
-      
-      .blog:hover  .buttons{
-      opacity:1;
+  .blog .fa-angle-double-right{
+    position:absolute;
+    top:50%;
+    right:30px;
+    background:#000;
+    padding:20px;
+    border-radius:50%;
+    color:#fff;
+    }
+    .blog .fa-angle-double-left{
+    position:absolute;
+    top:50%;
+    left:30px;
+    background:#000;
+    padding:20px;
+    border-radius:50%;
+    color:#fff;
+    }
+    .blog .angles{
+    opacity:0.7;
+    transition:0.5s;
+    }
+    .blog .angles:hover{
+    opacity:1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width:920px){
+      .experience .title_header{
+        width:100%;
+        
+          padding:2rem 0;
+          background-color: black;
+          margin-left: 2em;
       }
-      
-      .blog .fa-angle-double-right{
-      position:absolute;
-      top:50%;
-      right:30px;
-      background:#000;
-      padding:20px;
-      border-radius:50%;
-      color:#fff;
+    .experience section .card{
+    width:100%;
+    margin:0;
+    margin-right:15px;
+    }
+    }
+
+    @media (max-width:920px){
+      .blog .title_header{
+        width:100%;
+          padding:2rem 0;
+          background-color: black;
+          margin-left: 2em;
       }
-      .blog .fa-angle-double-left{
-      position:absolute;
-      top:50%;
-      left:30px;
-      background:#000;
-      padding:20px;
-      border-radius:50%;
-      color:#fff;
-      }
-      .blog .angles{
-      opacity:0.7;
-      transition:0.5s;
-      }
-      .blog .angles:hover{
-      opacity:1;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      }
-      
-      
+    .blog section .card{
+    width:100%;
+    margin:0;
+    margin-right:15px;
+    }
+    } 
+
       .contact .heading{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
         color: white;
+      text-align: center;
     }
     
     .contact .icons-container{
@@ -568,36 +655,29 @@ margin: .2em .2em;
         font-size: 1.2em;
     }
     
-    
+    .contact .queries {
+      margin: 2rem 5rem;
+      text-align: center;
+    }
     .contact .queries form{
-    width: 80%;
-    
-    margin: 1em 5em;
-    align-items: center;
-        background:#fff;
-        height: 40vh;
-        border-radius: .5rem;
-    
+    width: 60%;
+    height: 30vh;
+    text-align: center;
     }
-    .contact .queries form .box1
-    
+    .contact .queries form .box1,
+    .contact .queries form .box2
     {
-        margin: 0em 1em;
-        width: 30%;
+       
+        width: 100%;
         color:#333;
         text-transform: none;
         font-size: 1em;
     }
-    .contact .queries form .box2{
-      
-        width: 30%;
-        color:#333;
-        text-transform: none;
-        font-size: 1em;
-    }
+  
     .contact .queries form textarea{
-        width: 80%;
-        margin: 0em 1em;
+        width: 100%;
+        color:#333;
+        text-transform: none;
         height: 10rem;
         resize: none;
     }
@@ -619,20 +699,26 @@ margin: .2em .2em;
     .contact .queries form .btn{
         color: white;
         background: cyan;
-        padding: 1em 1em;
+        padding: .5em .5em;
         border-radius: 2em;
-        margin:0em 1em
+        width: 7rem;
     }
-    
-    
+    .contact .queries form .btn:hover{
+      background-color: grey;
+      color: cyan;
+    }
     .sub {
         margin-top: 2rem;
         text-align: center;
       }
-      .sub h1{
+      .sub h1,h4{
          text-transform: capitalize;
          color: cyan;
       }
+      .sub h3{
+        text-transform: capitalize;
+        color: white;
+     }
       .sub h5{
           color: red;
       }
@@ -657,7 +743,7 @@ margin: .2em .2em;
         background-color:black;
         color: cyan;
         padding: 0.3rem;
-        margin: 0 0.5rem;
+        margin: 0 .5em;
         border: none;
         border-radius: 2px;
         cursor: pointer;
@@ -673,19 +759,18 @@ margin: .2em .2em;
         flex-direction: row;
         justify-content: space-between;
         color: white;
-        padding: 1em 2em;
-        margin: 0em 0em;
-    }
+        margin: 0 .1em;
+       
+      }
     
     footer .social-icons a{
-        font-size: 1.5rem;
+        font-size: 1rem;
         color:white;
-       margin: 0em .2em;
         
     }
     footer .name{
-        font-size: 1.5em;
-        margin: 0em .2em;
+        font-size: 1rem;
+   text-align: end;
     }
     footer  a:hover{
         color:aqua;
@@ -698,117 +783,13 @@ margin: .2em .2em;
         padding-bottom: 20px;
     
     }
-    
-
-    @media only screen and (min-width: 680px) {
-      body {
-        font-family: 'Poppins', sans-serif;
-      }
-    }
-    @media only screen and(min-width:1200px){
-      body{
-        width: 1200px;
-        margin: 0 auto;
-      }
-      .landingpage{
-        width: 1200px;
-        margin: 0 auto;
-      }
-    }
-    @media only screen and (min-width: 920px) {
-      .menu {
-        display: none;
-      }
-      nav {
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
-        position: unset;
-        display: block;
-        width: auto;
-        height: auto;
-        background: none;
-      }
-      nav svg.close {
-        display: none;
-      }
-      nav ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 0;
-      }
-      nav ulli a {
-        color:white;
-        padding: .5em 1.5em;
-        font-size: .9rem;
-      }
-      nav ulli a:hover {
-        background: none;
-        text-decoration: underline;
-      }
-    }
-
-      
-
-
-    
-    @media (max-width:765px){
-      .service{
-      padding:2rem 0rem;
-      }
-      .service section{
-        
-      padding:0rem 1rem;
-      flex-wrap:wrap;
-      }
-      .service section .card{
-      margin:10px 0;
-      width: 100%;
-      
-      }
-      }  
-    @media (max-width:765px){
-      .portfolio{
-      padding:2rem 0rem;
-      }
-      .portfolio section{
-        
-      padding:0rem 1rem;
-      flex-wrap:wrap;
-      }
-      .portfolio section .card{
-      margin:10px 0;
-      width: 100%;
-     
-      }
-      }
-
     @media (max-width:920px){
-      .experience .title_header{
-        width:100%;
-          position:relative;
-          padding:2rem 0;
-          background-color: black;
-          margin-left: 2em;
+      .contact .icons-container .icons{
+        width: 100%;
       }
-    .experience section .card{
-    width:100%;
-    margin:0;
-    margin-right:15px;
-    }
-    }
-
-    @media (max-width:920px){
-      .blog .title_header{
-        width:100%;
-          position:relative;
-          padding:2rem 0;
-          background-color: black;
-          margin-left: 2em;
+    
+      .contact .queries form{
+        margin: 2rem 5rem;
+        text-align: center;
       }
-    .blog section .card{
-    width:100%;
-    margin:0;
-    margin-right:15px;
-    }
-    }
+    } 
