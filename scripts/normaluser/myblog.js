@@ -25,13 +25,9 @@ const fetchBlogs = async () => {
                     <span class="iconify" data-icon="bx:comment" style="color: cyan;" data-width="30"
                         data-height="30"></span>
                 </div>
-                <a href="../normaluser/blogpage.html?${res._id}" class="btn dark">read</a>
-                <a href="editblog.html" class="btn grey">edit</a>
-                <a href="/" class="btn danger">delete</a>
+                <a href="../normaluser/blogpage.html?${res._id}" class="btn dark">read More</a>
 
                      </div>
-                     
-                
                         `
 
 
