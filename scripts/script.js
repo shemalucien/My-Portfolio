@@ -1,11 +1,31 @@
-const menu = document.querySelector('.menu')
-const close = document.querySelector('.close')
-const nav = document.querySelector('nav')
+// Nav hamburgerburger selections
+const burger = document.querySelector("#burger-menu");
+const ul = document.querySelector("nav ul");
+const nav = document.querySelector("nav");
 
-menu.addEventListener('click', () => {
-    nav.classList.add('open-nav')
-})
+// Scroll to top selection
+const scrollUp = document.querySelector("#scroll-up");
 
-close.addEventListener('click', () => {
-    nav.classList.remove('open-nav')
-})
+// Select nav links
+const navLink = document.querySelectorAll(".nav-link");
+
+// Hamburger menu function
+burger.addEventListener("click", () => {
+  ul.classList.toggle("show");
+});
+
+// Close hamburger menu when a link is clicked
+navLink.forEach((link) =>
+  link.addEventListener("click", () => {
+    ul.classList.remove("show");
+  })
+);
+
+// scroll to top functionality
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});

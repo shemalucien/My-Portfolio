@@ -24,8 +24,12 @@ section .imgBx:before
 
 section .imgBx{
     position: relative;
-    width: 50%;
-    height: 100%;
+    width: 30%;
+    height: 30%;
+   margin-top: 12rem;
+   margin-left: 5rem;
+   
+
 }
 
 section .imgBx img{
@@ -155,11 +159,7 @@ section .contentBx .formBx form {
 @media (max-width:768px)
 {
 section .imgBx{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%
+display: none;
 }
 section .contentBx
 {
